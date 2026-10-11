@@ -1,0 +1,443 @@
+
+*{
+  margin:0;
+  padding: 0;
+  box-sizing:border-box;
+}
+body{
+  font-family: Arial,sans-serif;
+  background:#fdf4ff;
+}
+/* navebar */
+header{
+  background:linear-gradient(20deg,#7b2ff7,#f107a3);
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo{
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+}
+nav a{
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+}
+nav a:hover{
+  color: #ffe14d;
+}
+.hero{
+  height: 300px;
+  background: linear-gradient(135deg,#7b2ff7,#f107a3,#ff7a18);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 25px;
+
+ 
+  padding: 10px 10px auto;
+}
+.card{
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  text-decoration: none;
+  color: #333;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  transition: 0.3s;
+}
+.cardimg{
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+.cardh3{
+  text-align: center;
+  padding: 15px;
+}
+.card:hover{
+  transform: translateY(-10px);
+}
+
+
+menecloud se copy kiya
+/* ===== Basic reset ===== */
+/* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #fdf4ff;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* ===== Navbar ===== */
+/*header {
+  background: linear-gradient(90deg, #7b2ff7, #f107a3);
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.logo {
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+  padding-bottom: 4px;
+  border-bottom: 2px solid transparent;
+  transition: 0.3s;
+}
+
+/* hover effect on menu */
+nav a:hover {
+  border-bottom: 2px solid #ffe14d;
+  color: #ffe14d;
+}
+
+/* Hero section  */
+.hero {
+  height: 350px;
+  background: linear-gradient(135deg, #7b2ff7, #f107a3, #ff7a18, #7b2ff7);
+  background-size: 300% 300%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  animation: fadeIn 1.5s ease, gradientMove 8s ease infinite;
+}
+
+.hero h1 {
+  font-size: 42px;
+  color: white;
+  animation: slideDown 1s ease;
+}
+
+.hero p {
+  color: #fff3b0;
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+/* ===== Grid ===== */
+.section-title {
+  text-align: center;
+  margin: 40px 0 20px;
+  color: #7b2ff7;
+}
+
+/* .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  padding: 30px 50px 70px;
+} */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  max-width: 900px;
+  margin-top: 100px;
+  margin-left: 100px;
+  margin-right: 100px;
+  margin-bottom: 100px;
+  padding: 20px 20px ;
+}
+
+.card {
+  background: rgb(247, 246, 246);
+  border-radius: 12px;
+  overflow: hidden;
+  text-decoration: none;
+  color: #333;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  animation: fadeUp 1s ease;
+}
+
+/* .card img { 
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.4s;
+} */
+.card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
+.card h3 {
+  text-align: center;
+  padding: 15px;
+}
+
+/* different color strip for each card */
+.card:nth-child(1) { border-bottom: 3px solid #ff2e63; }
+.card:nth-child(2) { border-bottom: 3px solid #ffc300; }
+.card:nth-child(3) { border-bottom: 3px solid #00c2a8; }
+.card:nth-child(4) { border-bottom: 3px solid #4cc9f0; }
+.card:nth-child(5) { border-bottom: 3px solid #9d4edd; }
+.card:nth-child(6) { border-bottom: 3px solid #ff7a18; }
+
+/* hover effect on card */
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(241, 7, 163, 0.5);
+}
+
+.card:hover img {
+  transform: scale(1.1);
+}
+
+/* ===== Normal pages (about, contact) ===== */
+.content {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 25px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.content h1 {
+  color: #7b2ff7;
+  margin-bottom: 10px;
+}
+
+form {
+  margin-top: 20px;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+  transition: 0.3s;
+}
+
+/* jab user box par click kare */
+form input:focus,
+form textarea:focus {
+  border-color: #f107a3;
+  outline: none;
+  box-shadow: 0 0 6px rgba(241, 7, 163, 0.4);
+}
+/* ===== Flower detail page ===== */
+.flower-page {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  text-align: center;
+ 
+
+}
+
+.flower-page h1 {
+  color: #7b2ff7;
+  margin-bottom: 20px;
+  animation: slideDown 1s ease;
+}
+
+.flower-page img {
+  width: 100%;
+  max-width: 225px;
+  transform: scale(1.08);
+  height:175px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+   
+  
+}
+.flower-page img:hover {
+ 
+  background: linear-gradient(90deg, #f107a3, #ff7a18);
+    transition: 0.3s;
+  transform: scale(1.08);
+}
+
+.flower-page h2 {
+  margin: 25px 0 10px;
+}
+
+.benefits {
+  list-style: none;
+  text-align: left;
+  max-width: 350px;
+  margin: 0 auto;
+}
+
+.benefits li {
+  background: white;
+  margin-bottom: 10px;
+  padding: 12px 15px;
+  border-left: 5px solid #f107a3;
+  border-radius: 6px;
+  transition: 0.3s;
+  animation: slideIn 0.8s ease;
+}
+
+/* hover effect on each point */
+.benefits li:hover {
+  background: #fbe7ff;
+  transform: translate(10px);
+}
+
+/* ===== Button ===== */
+.btn {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 10px 25px;
+  background: linear-gradient(90deg, #7b2ff7, #f107a3);
+  color: white;
+  text-decoration: none;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: linear-gradient(90deg, #f107a3, #ff7a18);
+  transform: scale(1.08);
+}
+
+/* ===== Footer ===== */
+footer {
+  background: #1a1033;
+  color: white;
+  text-align: center;
+  padding: 15px;
+}
+
+/* ===== Animations ===== */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateX(-40px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ===== Media Queries ===== */
+
+/* Tablet (screen 768px se chhoti) */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  nav a {
+    margin: 0 10px;
+  }
+
+  .hero {
+    height: 250px;
+  }
+
+  .hero h1 {
+    font-size: 30px;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 20px;
+  }
+}
+
+/* Mobile (screen 480px se chhoti) */
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 24px;
+  }
+
+  .hero p {
+    font-size: 15px;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 5px 5px 5px 5px;
+    width: 360px;
+    margin-left: 3px;
+    height: 700px;
+    margin-right: 0.1px;
+  }
+
+  .card img {
+    height: 160px;
+  }
+
+  .flower-page {
+    padding: 10px;
+  }
+}
+.content {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 25px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.content h1 {
+  color: #7b2ff7;
+  margin-bottom: 10px;
+}
+
+.content p {
+  margin-bottom: 12px;
+}
